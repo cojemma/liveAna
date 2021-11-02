@@ -2,10 +2,10 @@ from chat_downloader import ChatDownloader
 def chat_record(url, count=None):
     chats_time = {}
     #url = 'https://www.youtube.com/watch?v=ljUsRNYzl0k'
-    chat = ChatDownloader().get_chat(url, max_messages=count)       # create a generator
+    chat = ChatDownloader().get_chat(url, max_messages=count)
 
-    for message in chat:                        # iterate over messages
-        message = chat.format(message)             # print the formatted message
+    for message in chat:
+        message = chat.format(message)
         message = message.split(' ')
         min = message[0][:-3]
         if min not in chats_time:

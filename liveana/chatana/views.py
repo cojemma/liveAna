@@ -2,6 +2,7 @@ import requests
 from django.shortcuts import render, redirect
 from .utils import get_title, chat_record, wExcel, get_stream
 from django.http import HttpResponse
+from django.contrib import messages
 # Create your views here.
 
 
@@ -25,7 +26,12 @@ def download(request):
         return redirect('')
     title = request.session['title']
     url = request.session['url']
-    data = chat_record(url)
+    try:
+        data = chat_record(url)
+    except:
+        messages.warning(request, '連結錯誤，請重試。')
+        request.session.flush()
+        return redirect('/')
     #print(data)
     excel = wExcel(data, title)
     excel_stream = get_stream(excel)

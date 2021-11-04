@@ -1,17 +1,6 @@
 from .settings import *
 import os
 
-INSTALLED_APPS = [
-    #"whitenoise.runserver_nostatic",
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'chatana'
-]
-
 ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else []
 
 # WhiteNoise configuration

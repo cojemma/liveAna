@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Coming Soon - Start Bootstrap Theme</title>
+        <title>聊天室留言紀錄統計</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
@@ -19,14 +19,13 @@
     </head>
     <body>
         <!-- Background Video-->
-        {% load static %}
-        <video class="bg-video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"><source src={% static "mp4/bg.mp4" %} type="video/mp4" /></video>
+        <img src="https://i.imgur.com/IEvmdui.gif" alt="this slowpoke moves"  class="bg-img" />
         <!-- Masthead-->
         <div class="masthead">
             <div class="masthead-content text-white">
                 <div class="container-fluid px-4 px-lg-0">
                     <h1 class="fst-italic lh-1 mb-4">聊天室留言統計</h1>
-                    <p class="mb-5">輸入直播記錄檔網址點選下載即可。請確保直播紀錄檔為公開，且留言紀錄已完整轉換。較久的直播紀錄檔需分析時間，請等候約十分鐘，謝謝。</p>
+                    <p class="mb-5">輸入直播記錄檔網址點選下載即可。<br>請確保直播紀錄檔為公開，且留言紀錄已完整轉換。<br>較久的直播紀錄檔需等候約十分鐘，謝謝。</p>
                     <!-- * * * * * * * * * * * * * * *-->
                     <!-- * * SB Forms Contact Form * *-->
                     <!-- * * * * * * * * * * * * * * *-->
@@ -57,8 +56,7 @@
         <!-- For more icon options, visit https://fontawesome.com/icons?d=gallery&p=2&s=brands-->
         <div class="social-icons">
             <div class="d-flex flex-row flex-lg-column justify-content-center align-items-center h-100 mt-3 mt-lg-0">
-                <a class="btn btn-dark m-3" href="#!"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-dark m-3" href="#!"><i class="fab fa-github"></i></a>
+                <a class="btn btn-dark m-3" href="https://github.com/cojemma/liveAna"><i class="fab fa-github"></i></a>
             </div>
         </div>
         {% if messages %}

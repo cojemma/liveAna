@@ -49,7 +49,17 @@ def wExcel(data, title='chat-count'):
     chart.set_categories(time)
 
     ws.add_chart(chart, 'D1')
-    wb.save(f'{title}.xlsx')
+    #wb.save(f'{title}.xlsx')
+
+    return wb
+
+import io
+def get_stream(file):
+    excel_stream = io.BytesIO()
+    file.save(excel_stream)
+    res = excel_stream.getvalue()
+    excel_stream.close()
+    return res
 
 
 if __name__ == '__main__':

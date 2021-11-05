@@ -29,7 +29,7 @@ from openpyxl.chart import LineChart, Reference
 def wExcel(data, title='chat-count'):
     wb = openpyxl.Workbook()
     ws = wb.active
-    ws.title = title
+    ws.title = f'{title[:10]}...'
 
     time = [t for t in data]
     count = [data[time] for time in data]

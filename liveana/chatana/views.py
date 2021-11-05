@@ -36,7 +36,7 @@ def download(request):
     excel = wExcel(data, title)
     excel_stream = get_stream(excel)
     response = HttpResponse(content_type='application/ms-excel')
-    response['Content-Disposition'] = f'attachment; filename="chat-analyze.xls"'
+    response['Content-Disposition'] = f'attachment; filename="chat-analyze.xlsx"'
     response.write(excel_stream)
     request.session.flush()
     return response

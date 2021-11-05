@@ -29,12 +29,13 @@ from openpyxl.chart import LineChart, Reference
 def wExcel(data, title='chat-count'):
     wb = openpyxl.Workbook()
     ws = wb.active
+    ws.title = title
 
     time = [t for t in data]
     count = [data[time] for time in data]
 
     rows = [[time[i], count[i]] for i in range(len(time))]
-    rows.insert(0, ['time', 'count'])
+    rows.insert(0, ['time(min)', 'count'])
     #print(rows)
     for  row in rows:
         ws.append((row))

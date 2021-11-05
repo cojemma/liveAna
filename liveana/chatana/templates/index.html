@@ -26,16 +26,9 @@
                 <div class="container-fluid px-4 px-lg-0">
                     <h1 class="fst-italic lh-1 mb-4">聊天室留言統計</h1>
                     <p class="mb-5">輸入直播記錄檔網址點選下載即可。<br>請確保直播紀錄檔為公開，且留言紀錄已完整轉換。<br>較久的直播紀錄檔需等候約十分鐘，謝謝。</p>
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- * * SB Forms Contact Form * *-->
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- This form is pre-integrated with SB Forms.-->
-                    <!-- To make this form functional, sign up at-->
-                    <!-- https://startbootstrap.com/solution/contact-forms-->
-                    <!-- to get an API token!-->
                     <form id="contactForm" action="/" method="post">
                         {% csrf_token %}
-                        <!-- Email address input-->
+                        <!-- Video Url input-->
                         <div class="row input-group-newsletter">
                             <label for="video_url"></label>
                             <div class="col"><input class="form-control" id="video_url" type="text" name="video_url" maxlength="200" required placeholder="Enter video's link..." aria-label="Enter video's link..." data-sb-validations="required,email" /></div>

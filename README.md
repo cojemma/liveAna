@@ -1,6 +1,6 @@
 # liveAna
 框架：Django
-<br>使用https://github.com/xenova/chat-downloader 爬取留言紀錄，並製作成excel檔案下載。
+<br>使用https://github.com/xenova/chat-downloader 爬取Youtube直播留言紀錄，並製作成Excel檔案下載。
 <br>api於leveAna/liveana/chatana/views.py
 <br>透過azure遠端部署，部署設定位於liveana/production.py。
 <br>背景使用台V 平平子 的直播紀錄https://www.youtube.com/watch?v=ljUsRNYzl0k&t=7256s 

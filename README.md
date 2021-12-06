@@ -1,4 +1,5 @@
 # liveAna
+網址：http://chat-ana.azurewebsites.net/
 框架：Django
 <br>使用https://github.com/xenova/chat-downloader 爬取Youtube直播留言紀錄，並製作成Excel檔案下載。
 <br>api於leveAna/liveana/chatana/views.py

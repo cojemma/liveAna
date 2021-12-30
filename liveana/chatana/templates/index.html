@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
+        <meta name="description" content="統計youtube直播中聊天室的留言紀錄" />
         <meta name="author" content="" />
         <title>聊天室留言紀錄統計</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -16,6 +16,15 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         {% load static %}
         <link href={% static "css/styles.css" %} rel="stylesheet" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-0XW3P05GJ3"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-0XW3P05GJ3');
+        </script>
     </head>
     <body>
         <!-- Background Video-->
@@ -25,7 +34,7 @@
             <div class="masthead-content text-white">
                 <div class="container-fluid px-4 px-lg-0">
                     <h1 class="fst-italic lh-1 mb-4">聊天室留言統計</h1>
-                    <p class="mb-5">輸入直播記錄檔網址點選下載即可。<br>請確保直播紀錄檔為公開，且留言紀錄已完整轉換。<br>較久的直播紀錄檔需等候約十分鐘，謝謝。</p>
+                    <p class="mb-5">輸入直播記錄檔網址即會下載直播聊天室的統計紀錄。<br>請確保直播紀錄檔為公開，且留言紀錄已完整轉換。<br>較久的直播紀錄檔需等候約十分鐘，謝謝。</p>
                     <form id="contactForm" action="/" method="post">
                         {% csrf_token %}
                         <!-- Video Url input-->

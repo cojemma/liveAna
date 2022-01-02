@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from chatana import views
+from chatana.views import Views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home),
-    path('download/', views.download),
+    path('', Views.home),
+    path('download/', Views.download),
+    path('download-info/', Views.download_info),
 ]

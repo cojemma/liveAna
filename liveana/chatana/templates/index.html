@@ -43,6 +43,7 @@
                             <div class="col"><input class="form-control" id="video_url" type="text" name="video_url" maxlength="200" required placeholder="Enter video's link..." aria-label="Enter video's link..." data-sb-validations="required,email" /></div>
                             <div class="col-auto"><button class="btn btn-primary" id="submitButton" type="submit">Download</button></div>
                         </div>
+                        <p class="mb-5" id="info"></p>
                         <div class="invalid-feedback mt-2" data-sb-feedback="email:required">An email is required.</div>
                         <div class="invalid-feedback mt-2" data-sb-feedback="email:email">Email is not valid.</div>
                         <!-- Submit error message-->
@@ -68,5 +69,20 @@
             {% endfor %}
         </script>
         {% endif %}
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+        <script>
+        $(document).ready(function() {
+            $("#submitButton").click(function() {
+                setTimeout(function() {
+                    $.getJSON("/download-info/", function(Info) {
+                        $("#info").text(Info.info);
+                    })
+                }, 5000);
+            })
+        })
+        </script>
     </body>
 </html>
